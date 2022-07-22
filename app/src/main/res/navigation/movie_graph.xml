@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/contentFragment"
-        android:name="com.example.bottomnavretrofit.ContentFragment"
+        android:name="com.example.bottomnavretrofit.coreUi.ContentFragment"
         android:label="ContentFragment" >
         <action
             android:id="@+id/action_contentFragment_to_movieDescription"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/movieDescription"
-        android:name="com.example.bottomnavretrofit.MovieDescription"
+        android:name="com.example.bottomnavretrofit.coreUi.MovieDescription"
         android:label="MovieDescription" />
 </navigation>

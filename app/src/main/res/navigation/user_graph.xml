@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/contentFragment2"
-        android:name="com.example.bottomnavretrofit.ContentFragment"
+        android:name="com.example.bottomnavretrofit.coreUi.ContentFragment"
         android:label="ContentFragment" >
         <action
             android:id="@+id/action_contentFragment2_to_userDescription"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/userDescription"
-        android:name="com.example.bottomnavretrofit.UserDescription"
+        android:name="com.example.bottomnavretrofit.coreUi.UserDescription"
         android:label="UserDescription" />
 </navigation>
