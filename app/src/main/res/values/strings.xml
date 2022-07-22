@@ -2,4 +2,7 @@
     <string name="app_name">bottom nav &amp; retrofit</string>
     <string name="user">User</string>
     <string name="movie">Movie</string>
+    <string name="actor_avatar">Actor avatar</string>
+    <string name="nickname">Nickname</string>
+    <string name="full_name">Full name</string>
 </resources>
