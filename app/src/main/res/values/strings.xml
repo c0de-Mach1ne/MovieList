@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">bottom nav &amp; retrofit</string>
+    <string name="user">User</string>
+    <string name="movie">Movie</string>
+</resources>
