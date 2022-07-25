@@ -1,6 +1,6 @@
 package com.example.bottomnavretrofit.model.users
 
-data class ResponseItem(
+data class User(
     val address: Address,
     val company: Company,
     val email: String,

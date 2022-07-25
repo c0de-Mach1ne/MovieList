@@ -1,4 +1,4 @@
-package com.example.bottomnavretrofit.coreUi
+package com.example.bottomnavretrofit.ui
 
 import androidx.fragment.app.Fragment
 import com.example.bottomnavretrofit.R

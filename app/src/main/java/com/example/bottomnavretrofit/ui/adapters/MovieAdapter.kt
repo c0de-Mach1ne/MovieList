@@ -1,4 +1,4 @@
-package com.example.bottomnavretrofit.coreUi.adapters
+package com.example.bottomnavretrofit.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View

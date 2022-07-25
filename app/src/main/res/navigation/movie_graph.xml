@@ -2,18 +2,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/movie_graph"
-    app:startDestination="@id/contentFragment">
-
+    app:startDestination="@id/movieFragment">
     <fragment
-        android:id="@+id/contentFragment"
-        android:name="com.example.bottomnavretrofit.coreUi.ContentFragment"
-        android:label="ContentFragment" >
+        android:id="@+id/movieFragment"
+        android:name="com.example.bottomnavretrofit.ui.MovieFragment"
+        android:label="MovieFragment" >
         <action
-            android:id="@+id/action_contentFragment_to_movieDescription"
+            android:id="@+id/action_movieFragment_to_movieDescription"
             app:destination="@id/movieDescription" />
     </fragment>
     <fragment
         android:id="@+id/movieDescription"
-        android:name="com.example.bottomnavretrofit.coreUi.MovieDescription"
+        android:name="com.example.bottomnavretrofit.ui.MovieDescription"
         android:label="MovieDescription" />
 </navigation>
