@@ -1,4 +1,4 @@
-package com.example.bottomnavretrofit.data.movie
+package com.example.bottomnavretrofit.data.api
 
 import com.example.bottomnavretrofit.model.movie.Movie
 import io.reactivex.Single

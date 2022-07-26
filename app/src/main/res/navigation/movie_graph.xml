@@ -14,5 +14,18 @@
     <fragment
         android:id="@+id/movieDescription"
         android:name="com.example.bottomnavretrofit.ui.MovieDescription"
-        android:label="MovieDescription" />
+        android:label="MovieDescription" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="team"
+            app:argType="string" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <argument
+            android:name="createdBy"
+            app:argType="string" />
+    </fragment>
 </navigation>

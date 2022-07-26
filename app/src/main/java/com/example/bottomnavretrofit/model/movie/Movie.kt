@@ -1,6 +1,7 @@
 package com.example.bottomnavretrofit.model.movie
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Movie(
     val bio: String,
@@ -15,4 +16,4 @@ data class Movie(
     @SerializedName("realname")
     val realName: String,
     val team: String
-)
+): Serializable

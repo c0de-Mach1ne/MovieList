@@ -1,17 +1,21 @@
 package com.example.bottomnavretrofit.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.bottomnavretrofit.App
-import com.example.bottomnavretrofit.ui.adapters.MovieAdapter
-import com.example.bottomnavretrofit.data.movie.MovieApi
+import com.example.bottomnavretrofit.App.Companion.ARG_MOVIE
+import com.example.bottomnavretrofit.MoveToMovieDetails
+import com.example.bottomnavretrofit.R
+import com.example.bottomnavretrofit.data.api.MovieApi
 import com.example.bottomnavretrofit.databinding.RecyclerFragmentBinding
 import com.example.bottomnavretrofit.model.movie.Movie
+import com.example.bottomnavretrofit.ui.adapters.MovieAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -34,6 +38,7 @@ class MovieFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         fetchMovieList((activity?.application as? App)?.movieApi)
+
     }
 
     private fun fetchMovieList(movieApi: MovieApi?) {
@@ -56,8 +61,19 @@ class MovieFragment : Fragment() {
     }
 
     private fun onResponse(response: List<Movie>) {
-        binding.recycler.adapter = MovieAdapter(response).apply {
+        binding.recycler.adapter = MovieAdapter(response, movieListener).apply {
             notifyDataSetChanged()
         }
     }
+
+    private val movieListener = object : MoveToMovieDetails {
+        override fun moveToMovieDescription(movie: Movie) {
+
+            findNavController().navigate(
+                R.id.action_movieFragment_to_movieDescription,
+                bundleOf(ARG_MOVIE to movie)
+            )
+        }
+    }
+
 }

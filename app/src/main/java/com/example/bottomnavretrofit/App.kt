@@ -1,10 +1,9 @@
 package com.example.bottomnavretrofit
 
 import android.app.Application
-import android.util.Log
 import com.chuckerteam.chucker.api.ChuckerInterceptor
-import com.example.bottomnavretrofit.data.movie.MovieApi
-import com.example.bottomnavretrofit.data.movie.UserApi
+import com.example.bottomnavretrofit.data.api.MovieApi
+import com.example.bottomnavretrofit.data.api.UserApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -53,6 +52,7 @@ class App : Application() {
 
     companion object {
 
+        const val ARG_MOVIE = "ARG_MOVIE"
         const val BASE_URL_MOVIE = "https://www.simplifiedcoding.net/"
         const val BASE_URL_USER = "https://jsonplaceholder.typicode.com/"
     }

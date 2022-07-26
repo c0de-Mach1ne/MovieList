@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.bottomnavretrofit.App
-import com.example.bottomnavretrofit.data.movie.UserApi
+import com.example.bottomnavretrofit.data.api.UserApi
 import com.example.bottomnavretrofit.databinding.RecyclerFragmentBinding
 import com.example.bottomnavretrofit.model.users.User
 import com.example.bottomnavretrofit.ui.adapters.UserAdapter

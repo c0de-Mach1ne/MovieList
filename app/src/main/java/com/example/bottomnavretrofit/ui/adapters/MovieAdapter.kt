@@ -5,11 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.bottomnavretrofit.MoveToMovieDetails
 import com.example.bottomnavretrofit.R
 import com.example.bottomnavretrofit.databinding.MovieItemBinding
 import com.example.bottomnavretrofit.model.movie.Movie
 
-class MovieAdapter(private val movieList: List<Movie>) :
+class MovieAdapter(
+    private val movieList: List<Movie>,
+    private val listener: MoveToMovieDetails
+) :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
@@ -20,6 +24,10 @@ class MovieAdapter(private val movieList: List<Movie>) :
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         holder.onBind(movieList[position])
+
+        holder.itemView.setOnClickListener {
+            listener.moveToMovieDescription(movieList[position])
+        }
     }
 
     override fun getItemCount(): Int = movieList.size
